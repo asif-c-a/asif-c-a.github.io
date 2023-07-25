@@ -1,32 +1,71 @@
 body, html{
 	height: 100%;
+	font-family: "League Spartan";
 }
 
-.hero-image{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("heroimage.png");
-
-	height: 100%;
-
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
+.topnav {
+	background-color: #0f0b08;
+	overflow: hidden;
 }
 
-.hero-text{
-	font-family: "Oswald";
-	font-size: 100%;
+.topnav a {
+	float: left;
+	color: #fff7de;
 	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
-.about-incon {
+.topnav a:hover {
+	background-color: #8c694f;
+	color: #0f0b08;
+}
 
-	text-align: center;
-	font-family: "Oswald";
+.topnav a.active {
+	background-color: #ffa663;
+	color: #0f0b08;
+}
+
+.quickie{
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 10%;
+	font-size: 350%;
+	
+	color: #0f0b08;
+}
+
+.more{
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 10%;
 	font-size: 200%;
+	color: #0f0b08;
+}
+
+.about{
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 200%;
+	color: #0f0b08;
+}
+
+footer{
+
+	text-align: left;
+	position: fixed;
+	left: 0;
+  	bottom: 0;
+  	width: 100%;
+	height: 10%;
+	background-color: #0f0b08;
+	color: #fff7de;
+}
+
+.footer{
+
+	margin-left: 5%;
+	align-self: center;
+	position: absolute;
 }
