@@ -1,71 +1,41 @@
-body, html{
-	height: 100%;
-	font-family: "League Spartan";
-}
 
-.topnav {
-	background-color: #0f0b08;
-	overflow: hidden;
-}
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 
-.topnav a {
-	float: left;
-	color: #fff7de;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
-
-.topnav a:hover {
-	background-color: #8c694f;
-	color: #0f0b08;
-}
-
-.topnav a.active {
-	background-color: #ffa663;
-	color: #0f0b08;
-}
-
-.quickie{
-	margin-left: 5%;
-	margin-right: 5%;
-	padding-top: 10%;
-	font-size: 350%;
+	background: #0a0a0a;
 	
-	color: #0f0b08;
 }
 
-.more{
-	margin-left: 5%;
-	margin-right: 5%;
-	padding-top: 10%;
-	font-size: 200%;
-	color: #0f0b08;
+@keyframes bgchng {
+	0% {color: #b0251e;}
+	25% {color: #60b01e;}
+	50% {color: #1e98b0;}
+	75% {color: #581eb0;}
+	100% {color: #b0251e;}
 }
 
-.about{
-	margin-left: 5%;
-	margin-right: 5%;
-	font-size: 200%;
-	color: #0f0b08;
+@keyframes fontchng {
+	0% {font-family: "Roboto";}
+	33% {font-family: "Archivo";}
+	66% {font-family: "Zilla Slab";}
+	100% {font-family: "Gloock";}
 }
 
-footer{
-
-	text-align: left;
-	position: fixed;
-	left: 0;
-  	bottom: 0;
-  	width: 100%;
-	height: 10%;
-	background-color: #0f0b08;
-	color: #fff7de;
+.helloanimcol {
+	animation-name: bgchng;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+.helloanimfont {
+	animation-name: fontchng;
+	animation-duration: 1.4s;
+	animation-iteration-count: infinite;
 }
 
-.footer{
+h1 {
+	font-size: 20vw;
+	text-align: center;
+} 
 
-	margin-left: 5%;
-	align-self: center;
-	position: absolute;
-}
