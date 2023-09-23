@@ -24,6 +24,11 @@ body {
 }
 
 .helloanimcol {
+
+	word-wrap: break-word;
+	height: 250px;
+	padding: 0;
+
 	animation-name: bgchng;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -32,6 +37,14 @@ body {
 	animation-name: fontchng;
 	animation-duration: 1.4s;
 	animation-iteration-count: infinite;
+}
+
+.content {
+	font-family: "Bebas Neue";
+	font-size: 2vw;
+	color: white;
+	text-align: center;
+	letter-spacing: 2px;
 }
 
 h1 {
