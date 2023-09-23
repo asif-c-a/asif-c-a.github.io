@@ -6,7 +6,22 @@ body {
 
 	background: #0a0a0a;
 	
+	 background: repeating-linear-gradient(45deg,#080808,#080808 5%,#060606 5%,#060606 10%
+	);
+  background-size: 100px 100px;
+  animation: move-it 2s linear infinite;
+
 }
+
+@keyframes move-it {
+  0% {
+    background-position: initial;
+  }
+  100% {
+    background-position: 100px 0px;
+  }
+}
+
 
 @keyframes bgchng {
 	0% {color: #b0251e;}
@@ -40,6 +55,9 @@ body {
 }
 
 .content {
+
+	vertical-align: middle;
+
 	font-family: "Bebas Neue";
 	font-size: 2vw;
 	color: white;
