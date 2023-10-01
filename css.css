@@ -37,7 +37,11 @@ p {
 }
 
 .buttons {
-	padding-top: 20px;
+
+	overflow: hidden;
+	position: fixed;
+	bottom: 3%;
+
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
@@ -77,7 +81,7 @@ button {
 	text-align: center;
 
 	padding: 8px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 8%;
+	padding-right: 8%;
 	border-radius: 5px;
 }
