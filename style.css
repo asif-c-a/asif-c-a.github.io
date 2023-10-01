@@ -1,0 +1,95 @@
+body {
+	background: #040404;
+
+	margin:0;
+	padding: 0;
+}
+
+.content {
+	margin: 10%;
+	color: #FFFFFF;
+	font-family: "Raleway";
+}
+
+h3 {
+	
+	font-size: 30px;
+	margin: 0;
+	color: #FFFFFF;
+}
+
+h4 {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+h5 {
+	margin: 0;
+}
+
+p {
+	font-size: 13px;
+}
+
+.touch-grad {
+	height: 25px;
+	background: linear-gradient(#0b1e4a 0%, #00000000 99%);
+}
+
+
+.DataBlock {
+	margin-bottom: 5%;
+
+	background-color: #2F2F2F;
+	padding-left: 10px;
+
+	padding-top: 5%;
+	padding-bottom: 2%;
+	display: flow;
+
+	text-align: left;
+	width: 100%;
+
+	border-radius: 5px;
+}
+
+.centralstation {
+
+}
+
+#active {
+	background: rgb(66,189,230);
+background: radial-gradient(circle, rgba(66,189,230,1) 10%, rgba(53,160,195,1) 63%);
+}
+
+
+#navicon {
+	width: 9vw;
+	background-color: white;
+}
+
+.navbutton {
+	background-color: white;
+	width: 33.3%;
+	height: auto;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nav {
+
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+/*
+Near Me Icon by <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by Freepik - Flaticon</a>
+Empty Icon by <a href="https://www.flaticon.com/free-icons/empty-set" title="empty set icons">Empty set icons created by Freepik - Flaticon</a>
+*/
