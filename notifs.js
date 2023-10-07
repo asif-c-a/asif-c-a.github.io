@@ -1,28 +1,41 @@
-var d = new Date();
-let tm = d.getMinutes();
-let ts = d.getSeconds();
-
 var notfed = false;
-var justBefore = 0;
 
-const tips = ["Joe Mama, not Joe Biden", "Its not a trap. Its a Standoff", "Its one of those kind of nights",
-			"Sometime you're gay. Sometimes you're not", "I am Asif", "Now I am become death. Destroyer of Worlds",
-			"Did ya watch Oppenheimer?","Watcha know bout rolling down in the Deep?"];
+const tips = [
+    "Joe Mama, not Joe Biden",
+    "It's not a trap. It's a Standoff",
+    "It's one of those kind of nights",
+    "Sometimes you're gay. Sometimes you're not",
+    "I am Asif",
+    "Now I am become death. Destroyer of Worlds",
+    "Did ya watch Oppenheimer?",
+    "Watcha know bout rolling down in the Deep?"
+];
 
-justBefore = tips;
-
-if(justBefore == tips)
-{
-	var tip = Math.floor(Math.random() * tips.length);
+function showRandomNotification() {
+    var tip = Math.floor(Math.random() * tips.length);
+    new Notification(tips[tip]);
 }
 
+function checkTime() {
+    var d = new Date();
+    var tm = d.getMinutes();
+    var ts = d.getSeconds();
 
-while (tm != 0 && ts != 0 && notfed==false) {
-	new Notification(tips[tip]);
-	notfed = true;
+    if (tm === 0 && ts === 0 && !notfed) {
+        showRandomNotification();
+        notfed = true;
+    }
+
+    if (tm !== 0 && ts !== 0 && notfed) {
+        notfed = false;
+    }
 }
 
-if(tm == 30 && notfed == true)
-{
-	notfed = false;
+// Request permission for desktop notifications
+if (Notification.permission !== 'granted') {
+    Notification.requestPermission();
 }
+
+// Check the time every second
+setInterval(checkTime, 1000);
+setInterval(showRandomNotification, 1200000);

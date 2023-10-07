@@ -319,18 +319,25 @@
 }
 
 
-#track > .item > .photo {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: center;
-}
+
 
 #track {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
   display: flex;
-  gap: 4vmin;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(0%, -50%);
+  justify-content: center;
+}
+
+#track > .endan_block {
+  background-color: black;
+  width: 90%;
+  height: 80vh;
+  border-radius: 15px;
+}
+
+.endan_block > img {
+  object-fit: cover;
 }
