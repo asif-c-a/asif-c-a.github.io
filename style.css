@@ -99,13 +99,13 @@ h5:hover:before {
         
     }
     to {
-        transform: scale(15);
+        transform: scale(60);
     }
 }
 
 @keyframes revtransNow {
     from {
-        transform: scale(15);
+        transform: scale(60);
         
     }
     to {
