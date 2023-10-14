@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fffffff;
+}
+
+h2 {
+    position: relative;
+    font-size: 2vw;
+    letter-spacing:1px;
+    color: white;
+    font-family: "Pixelify Sans";
+    display:table;
+    margin:40px auto;
+}
+
+h5 {
+    position: relative;
+    font-size: 8vw;
+    letter-spacing:10px;
+    font-family: "Pixelify Sans";
+    display:table;
+    margin:40px auto;
+    cursor:pointer;
+    transition:.1s;
+}
+
+h5:before, h5:after {
+    content:attr(data-text);
+    transition:.1s;
+}
+
+h5:before {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index:-1;
+    text-shadow:
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px;
+    -webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+          mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+}
+
+h5:hover {
+    transform:translate(-10px,-10px);
+} 
+
+h5:hover:before {
+    text-shadow:
+     1px 1px,
+     2px 2px,
+     3px 3px,
+     4px 4px,
+     5px 5px,
+     6px 6px,
+     7px 7px,
+     8px 8px,
+     9px 9px,
+     10px 10px;
+}
+
+.incircle {
+    width: 100px;
+    height: 100px;
+    background-color: #e85456;
+    border-radius: 50%;    z-index: 999;
+    position: absolute;
+    transform: translate(0, 0) scale(0);
+}
+
+.outcircle {
+    width: 100px;
+    height: 100px;
+    background-color: #e85456;
+    border-radius: 50%;    z-index: 999;
+    position: absolute;
+    transform: translate(0, 0) scale(0);
+
+    animation: revtransNow .8s forwards;
+}
+
+@keyframes transNow {
+    from {
+        transform: scale(.1);
+        
+    }
+    to {
+        transform: scale(15);
+    }
+}
+
+@keyframes revtransNow {
+    from {
+        transform: scale(15);
+        
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+#playButton {
+    border: none;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
