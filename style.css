@@ -1,19 +1,36 @@
 body {
-  background-color: #121212;
+  background: white;
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -17px -17px;
+
+  line-height: 0px;
+  margin-left: 200px;
+  margin-top: 300px;
+
+  animation: bgmove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
 }
 
-img {
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
+h1 {
+  font-family: "League Spartan";
+  font-size: 128px;
 
-  scale: 20;
 }
 
-.center {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; 
+h2 {
+  font-family: "League Spartan";
+  font-size: 32px;
+}
+
+@keyframes bgmove{
+  from {
+    background-position: 20px -20px;
+  }
+  to {
+    background-position: 60px -60px;
+  }
 }
