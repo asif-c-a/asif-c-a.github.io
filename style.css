@@ -1,61 +1,116 @@
 body {
-  background: white;
-  background-image: radial-gradient(black 1px, transparent 0);
-  background-size: 40px 40px;
-  background-position: -17px -17px;
+	background-color: white;
+	margin: 0;
 
-  animation: bgmove;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+	
+}
 
-  margin: 0;
+.inv {
+	color: #00000000;
+}
+
+.me {
+	padding-top: 12%;
+	padding-inline: 20%;
+
+	font-size: 150px;
+	font-family: "Cal Sans";
+}
+
+.me .aboutme {
+	font-size: 25px;
+	font-family: "Cascadia Code";
+}
+
+.nav {
+	position: fixed;
+	right: 32px;
+	top: 25vh;
+
+	background-color: white;
+
+	padding: 10px;
+
+	height: 300px;
+	width: 50px;
+
+	border-radius: 32px 32px 32px 32px;
+
+	box-shadow: 0px 0px 10px #080808;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	transition-property: width, border-radius;
+	transition-duration: 1s, .2s;
+	transition-delay: 0s, 1s;
 
 }
 
-.intro {
-  line-height: 0px;
-  margin-left: 200px;
-  margin-top: 300px;
-
-  padding-bottom: 225px;
+.current:hover {
+	animation-name: rainbow;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transition: all .1s;
 }
 
-h1 {
-  font-family: "League Spartan";
-  font-size: 128px;
+.nav .enav {
+	padding: 5px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: left;
+	gap: 10px;
+	align-items: center;
 
+	transition: all .2s;
+	transition-delay: 1s;
 }
 
-h2 {
-  font-family: "League Spartan";
-  font-size: 32px;
+.enav:hover {
+	box-shadow: 0px 0px 5px #080808;
+	transition: all .1s;
 }
 
-@keyframes bgmove{
-  from {
-    background-position: 20px -20px;
-  }
-  to {
-    background-position: 60px -60px;
-  }
+.current {
+	box-shadow: 0px 0px 5px #080808;
 }
 
-.whatido {
-  background-color: black;
-  width: 100%;
-  height: 700px;
-
-  color: white;
-
-  display: flex;
-  justify-content: space-around;
+@keyframes rainbow
+{
+	0%  { box-shadow: 0px 0px 10px darkred; }
+	25% { box-shadow: 0px 0px 10px darkgreen; }
+	50% { box-shadow: 0px 0px 10px darkblue; }
+	75% { box-shadow: 0px 0px 10px #080808; }
+	100%{ box-shadow: 0px 0px 10px darkred;}
 }
 
-.whatidop1 {
-  padding-top: 100px;
+.text{
+	font-family: "Cascadia Code";
+	opacity: 0%;
+	display: none;
+
+	transition: all .1s;
 }
 
-.whatido iframe {
-  padding-top: 100px;
+.nav:hover .enav .text{
+	display: inherit;
+	font-size: 16px;
+	opacity: 100%;
+	overflow: hidden;
+
+	transition-property: opacity, display;
+	transition-duration: 0.1s, 1s;
+	transition-delay: 0s, 0.5s;
+}
+
+.nav:hover .enav {
+	border-radius: 8px 8px 8px 8px;
+	transition: all .2s;
+}
+
+.nav:hover {
+	width: 225px;
+	border-radius: 16px 16px 16px 16px;
+	transition: all .2s;
 }
