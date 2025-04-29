@@ -15,6 +15,8 @@ body {
 	font-family: "Cascadia Code";
 }
 
+html { scroll-behavior: smooth;}
+
 @keyframes bgmove{
   from {
     background-position: 20px -20px;
@@ -140,11 +142,33 @@ body {
 
 
 
-
-
-
 /*NAVIGATION ISLAND CODE ------- TREAD CAREFULLY*/
 
+.top-right-bubble {
+    position: fixed;
+    top: 20px;
+    right: 42px;
+    width: 50px;
+    height: 50px;
+
+    background-color: white;
+    box-shadow: 0 0 10px #080808;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.top-right-bubble:hover {
+    background-color: #f0f0f0;
+}
 
 .nav {
 	position: fixed;
