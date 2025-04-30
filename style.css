@@ -167,7 +167,10 @@ html { scroll-behavior: smooth;}
 }
 
 .contact {
-	padding: 15%;
+	padding-top: 15%;
+	padding-inline: 15%;
+	padding-bottom: 10%;
+
 	font-size: 48px;
 
 	background-color: #080808EE;
@@ -208,13 +211,50 @@ html { scroll-behavior: smooth;}
 	transition: all .1s ease;
 }
 
+.contact .socials {
+	width: 25%;
 
+	padding-top: 10px;
+	padding-bottom: 10px;
 
+	margin-inline: auto;
 
+	margin-top: 100px;
 
+	z-index: 10;
 
+	display: flex;
+	justify-content: space-around;
 
+	background-color: #080808;
 
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #FFFFFF;
+}
+
+.contact .socials .socialsicons svg{
+	width: 32px;
+	height: 32px;
+
+	transition: all .1s .3s;
+}
+
+.contact .socials #linkedin:hover svg{
+	fill: #0077B5;
+	scale: 120%;
+	transition: all .1s ease;
+}
+
+.contact .socials #github:hover svg{
+	scale: 120%;
+	transition: all .1s ease;
+}
+
+.contact .socials #hackerrank:hover svg{
+	fill: #008000;
+	scale: 120%;
+	transition: all .1s ease;
+}
 
 
 
@@ -238,7 +278,7 @@ html { scroll-behavior: smooth;}
 
 	padding: 10px;
 
-	z-index: 1;
+	z-index: 1000;
 
 	height: 300px;
 	width: 50px;
