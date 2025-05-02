@@ -109,6 +109,8 @@ window.addEventListener('scroll',
 			project.classList.remove("current");
 			certification.classList.remove("current");
 			contact.classList.remove("current");
+
+			swapSkillIcon();
 		}
 		else if (a>=0) 
 		{
