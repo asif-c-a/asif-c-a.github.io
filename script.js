@@ -3,6 +3,7 @@ window.addEventListener('scroll',
 	function() {
 		
 		var a = window.scrollY;
+		var vh = self.innerHeight;
 
 		const homeIcon = document.querySelector("#home svg");
 		const home = document.querySelector('#home');
@@ -19,56 +20,55 @@ window.addEventListener('scroll',
 		const contactIcon = document.querySelector("#contact svg");
 		const contact = document.querySelector('#contact');
 
-		if(a>=228&&a<741 || a>=1509&&a<2022 || a>=2934)
-		{
-			contactIcon.style.fill = 'white';
-			contact.style.color = 'white';
+		// if(a>=228&&a<741 || a>=1509&&a<2022 || a>=2934)
+		// {
+		// 	contactIcon.style.fill = 'white';
+		// 	contact.style.color = 'white';
 
-		}else{
-			contactIcon.style.fill = 'black';
-			contact.style.color = 'black';
-		}
+		// }else{
+		// 	contactIcon.style.fill = 'black';
+		// 	contact.style.color = 'black';
+		// }
 
-		if(a>=285&&a<798 || a>=1566&&a<2079 || a>=2991)
-		{
-			certificationIcon.style.fill = 'white';
-			certification.style.color = 'white';
+		// if(a>=285&&a<798 || a>=1566&&a<2079 || a>=2991)
+		// {
+		// 	certificationIcon.style.fill = 'white';
+		// 	certification.style.color = 'white';
 
-		}else{
-			certificationIcon.style.fill = 'black';
-			certification.style.color = 'black';
-		}
+		// }else{
+		// 	certificationIcon.style.fill = 'black';
+		// 	certification.style.color = 'black';
+		// }
 
-		if(a>=342&&a<855 || a>=1623&&a<2136 || a>=3048)
-		{
-			projectIcon.style.fill = 'white';
-			project.style.color = 'white';
+		// if(a>=342&&a<855 || a>=1623&&a<2136 || a>=3048)
+		// {
+		// 	projectIcon.style.fill = 'white';
+		// 	project.style.color = 'white';
 
-		}else{
-			projectIcon.style.fill = 'black';
-			project.style.color = 'black';
-		}
+		// }else{
+		// 	projectIcon.style.fill = 'black';
+		// 	project.style.color = 'black';
+		// }
 	
-		if(a>=399&&a<912 || a>=1653&&a<2223 || a>=3105)
-		{
-			skillIcon.style.fill = 'white';
-			skill.style.color = 'white';
+		// if(a>=399&&a<912 || a>=1653&&a<2223 || a>=3105)
+		// {
+		// 	skillIcon.style.fill = 'white';
+		// 	skill.style.color = 'white';
 
-		}else{
-			skillIcon.style.fill = 'black';
-			skill.style.color = 'black';
-		}
+		// }else{
+		// 	skillIcon.style.fill = 'black';
+		// 	skill.style.color = 'black';
+		// }
 
-		if(a>=456&&a<969 || a>=1710&&a<2280 || a>=3162)
-		{
-			homeIcon.style.fill = 'white';
-			home.style.color = 'white';
+		// if(a>=456&&a<969 || a>=1710&&a<2280 || a>=3162)
+		// {
+		// 	homeIcon.style.fill = 'white';
+		// 	home.style.color = 'white';
 
-		}else{
-			homeIcon.style.fill = 'black';
-			home.style.color = 'black';
-		}	
-
+		// }else{
+		// 	homeIcon.style.fill = 'black';
+		// 	home.style.color = 'black';
+		// }	
 
 		// Setting current tag to current section
 		if (a>=3341)
@@ -151,4 +151,3 @@ function swapSkillIcon() {
 
 	
 }
-
