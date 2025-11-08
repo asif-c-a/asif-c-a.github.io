@@ -1,258 +1,195 @@
+:root {
+    --titlebar-height: 25px;
+    --title-content-space: 5px;
+    --window-padding: 10px;
+
+    --long-content: 300px;
+    --medium-content: fit-content;
+    --short-content: 150px;
+
+    --bg-col: #E5DADA;
+    --titlebar-color: #DA2C38;
+    --titlebar-del: #BBBBBB;
+    --text-col: #02040F;
+    --drop-shadow: #00000055;
+    --hover: #00000022;
+}
+
 body {
-	background: white;
-	background-image: radial-gradient(black 1px, transparent 0);
-	background-size: 40px 40px;
-	background-position: -17px -17px;
-	
-	animation: bgmove;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+    font-family: 'Cascadia Code';
+    color: var(--text-col);
+    background-color: var(--bg-col);
 
-	margin: 0;	
+    background-size: 20px 20px;
+    background-image: 
+        linear-gradient(to right, var(--drop-shadow) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--drop-shadow) 1px, transparent 1px);
 
-	font-family: "Cascadia Code";
+    overflow: hidden;
 }
 
-html { scroll-behavior: smooth;}
-
-@keyframes bgmove{
-  from {
-    background-position: 20px -20px;
-  }
-  to {
-    background-position: 60px -60px;
-  }
+b, a {
+    color: var(--titlebar-color);
 }
 
-.home {
-	height: 100vh;
+a {
+    float: right;
 }
 
-.home .me {
-	padding-top: 12%;
-	padding-inline: 20%;
+.deck {
+    width: 60px;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 0;
 
-	font-size: 150px;
-	font-family: "Cal Sans";
+    background-color: var(--bg-col);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
 
+    box-shadow: 10px 10px 0px 0px var(--drop-shadow);
+
+    border-radius: 5px;
+    border: 2.5px solid var(--text-col);
+    overflow: hidden;
+
+    z-index: 10000;
+
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
 }
 
-.me .aboutme {
-	font-size: 25px;
-	font-family: "Cascadia Code";
+.deck .deck-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
-.homerest {
-	padding: 15%;
-	font-size: 24px;
-
-	background-color: #080808EE;
-	backdrop-filter: invert(80%);
-	color: white;
-	box-shadow: 0px 0px 100px #080808;
+.deck .deck-item:hover {
+    background-color: var(--hover);
 }
 
-.skills {
-	padding: 20%;
-	font-size: 48px;
-	text-align: center;
+.deck .deck-item svg {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    max-width: 32px;
 }
 
-.skills .skillicons {
-	padding-top: 50px;
-	display: flex;
-	justify-content: space-between;
+.deck .deck-item .desc {
+    display: none;
+    user-select: none;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-#html svg{
-	fill: #000000;
-	scale: 100%;
-	transition: all .1s .3s;
+.deck:hover {
+    width: 240px;
 }
 
-#html:hover svg{
-	fill: #E34C26;
-	scale: 120%;
-	transition: all .1s;
+.deck:hover .deck-item .desc {
+    display: inherit;
+    overflow: hidden;
 }
 
-#css svg {
-	fill: #000000;
-	scale: 100%;
-	transition: all .1s .3s;
-}
+.window {
+    background-color: var(--titlebar-del);
+    width: 500px;
+    padding-top: var(--window-padding);
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
 
-#css:hover svg {
-	fill: #264DE4;
-	scale: 120%;
-	transition: all .1s;
-}
+    user-select: none;
+    position: absolute;
+    top: 20%;
+    left: 20%;
 
-#javascript svg{
-	fill: #000000;
-	scale: 100%;
-	transition: all .1s .3s;
-}
+    box-shadow: 10px 10px 0px 0px var(--drop-shadow);
+    border-radius: 5px;
+    border: 2.5px solid var(--text-col);
 
-#javascript:hover svg{
-	fill: #F0DB4F;
-	scale: 120%;
-	transition: all .1s;
-}
-
-#godot svg{
-	fill: #000000;
-	scale: 100%;
-	transition: all .1s .3s;
-}
-
-#godot:hover svg{
-	fill: #478CBF;
-	scale: 120%;
-	transition: all .1s;
-}
-
-.eskill .alt {
-	font-size: 16px;
-	opacity: 0%;
-	transition: all .1s .1s;
-}
-
-.eskill:hover .alt {
-	font-size: 16px;
-	opacity: 100%;
-	transition: all .1s .3s;
-}
-
-@keyframes cursor-blink {
-  0% {
+    transform-origin: center;
     opacity: 0;
-  }
+    transform: scale(0.8);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.aboutme h4::after {
-  content: "|";
-  width: 4px;
-  height: 20px;
-  background: #ffffff;
-  display: inline-block;
-  animation: cursor-blink 1.5s steps(2) infinite;
+.window.active {
+    background-color: var(--titlebar-color);
+    box-shadow: 12px 12px 0px 0px var(--drop-shadow);
 }
 
-.projects {
-	padding: 15%;
-	font-size: 24px;
-
-	background-color: #080808EE;
-	backdrop-filter: invert(80%);
-	color: white;
-	box-shadow: 0px 0px 100px #080808;
+.window.open {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
 }
 
-.certifications {
-	padding: 20%;
-	font-size: 48px;
-	text-align: center;
+.window.closing {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
 }
 
-.certifications .cert {
-	font-size: 24px;
-	margin-top: 25px;
-	padding: 20px;
-	border-radius: 12px;
-	backdrop-filter: blur(2px);
-	box-shadow: 0px 0px 5px #080808;
+.window .window-heading {
+    margin-inline: var(--window-padding);
+    height: var(--titlebar-height);
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    margin-bottom: var(--title-content-space);
 }
 
-.contact {
-	padding-top: 15%;
-	padding-inline: 15%;
-	padding-bottom: 10%;
-
-	font-size: 48px;
-
-	background-color: #080808EE;
-	backdrop-filter: invert(80%);
-	color: white;
-	box-shadow: 0px 0px 100px #080808;
+.window .window-heading .window-close {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
 }
 
-.contact form {
-	font-size: 24px;
-	padding-top: 20px;
+.window .window-heading .window-close:hover {
+    background-color: #00000022;
 }
 
-.contact form input {
-	border-radius: 5px;
-	padding: 5px;
-
-	color: white;
-	font-family: "Cascadia Code";
-
-	background-color: #00000000;
-	border-color: #FFFFFF;
-	border-width: 1px;
+.window .window-content {
+    background-color: var(--bg-col);
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    padding: var(--window-padding);
+    font-size: 24px;
 }
 
-.contact form .buttons {
-	padding-inline: 25px;
-	background-color: #00000000;
-	color: white;
-
-	transition: all .1s .3s;
+.about .window-content {
+    height: var(--short-content);
 }
 
-.contact form .buttons:hover {
-	background-color: white;
-	color: #080808;
-
-	transition: all .1s ease;
+.skills .window-content {
+    height: var(--medium-content);
 }
 
-.contact .socials {
-	width: 25%;
-
-	padding-top: 10px;
-	padding-bottom: 10px;
-
-	margin-inline: auto;
-
-	margin-top: 100px;
-
-	z-index: 10;
-
-	display: flex;
-	justify-content: space-around;
-
-	background-color: #080808;
-
-	border-radius: 20px;
-	box-shadow: 0px 0px 10px #FFFFFF;
+.projects .window-content {
+    height: var(--long-content);
 }
 
-.contact .socials .socialsicons svg{
-	width: 32px;
-	height: 32px;
-
-	transition: all .1s .3s;
+.cert .window-content {
+    height: var(--long-content);
 }
 
-.contact .socials #linkedin:hover svg{
-	fill: #0077B5;
-	scale: 120%;
-	transition: all .1s ease;
-}
-
-.contact .socials #github:hover svg{
-	scale: 120%;
-	transition: all .1s ease;
-}
-
-.contact .socials #hackerrank:hover svg{
-	fill: #008000;
-	scale: 120%;
-	transition: all .1s ease;
+.contact .window-content {
+    height: var(--medium-content);
 }
 
 
@@ -260,110 +197,10 @@ html { scroll-behavior: smooth;}
 
 
 
-
-
-
-
-
-/*NAVIGATION ISLAND CODE ------- TREAD CAREFULLY*/
-
-.nav {
-	position: fixed;
-	right: 32px;
-	top: 25vh;
-
-	backdrop-filter: blur(5px);
-
-	background-color: #FFFFFFEE;
-
-	padding: 10px;
-
-	z-index: 1000;
-
-	height: 300px;
-	width: 50px;
-
-	border-radius: 32px 32px 32px 32px;
-
-	box-shadow: 0px 0px 10px 2px #080808, 0px 0px 10px 1px #FFFFFF;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-	transition-property: width, border-radius;
-	transition-duration: 1s, .2s;
-	transition-delay: 0s, 1s;
-
-}
-
-.current:hover {
-	animation-name: rainbow;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	transition: all .1s;
-}
-
-.nav .enav {
-	padding: 5px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: left;
-	gap: 10px;
-	align-items: center;
-
-	transition-property: border-radius;
-	transition-delay: 1s;
-}
-
-.enav:hover {
-	box-shadow: 0px 0px 10px 2px #080808, 0px 0px 10px 1px #FFFFFF;;
-	transition: all .1s;
-}
-
-.current {
-	box-shadow: 0px 0px 10px 2px #080808, 0px 0px 10px 1px #FFFFFF;
-}
-
-@keyframes rainbow
-{
-	0%  { box-shadow: 0px 0px 10px darkred; }
-	25% { box-shadow: 0px 0px 10px darkgreen; }
-	50% { box-shadow: 0px 0px 10px darkblue; }
-	75% { box-shadow: 0px 0px 10px #080808; }
-	100%{ box-shadow: 0px 0px 10px darkred;}
-}
-
-.text{
-	font-family: "Cascadia Code";
-	opacity: 0%;
-	display: none;
-
-	text-decoration: none;
-
-	transition: all .1s;
-}
-
-.nav:hover .enav .text{
-	display: inherit;
-	font-size: 16px;
-	opacity: 100%;
-	overflow: hidden;
-
-	transition-property: opacity, display;
-	transition-duration: 0.1s, 1s;
-	transition-delay: 0s, 0.5s;
-}
-
-.nav:hover .enav {
-	border-radius: 8px 8px 8px 8px;
-	transition: all .2s;
-}
-
-.nav:hover {
-	width: 225px;
-	border-radius: 16px 16px 16px 16px;
-	transition: all .2s;
-}
-
+.quick-tutorial {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }

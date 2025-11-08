@@ -1,159 +1,140 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="mobstyle.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cal Sans">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cascadia Code">
-  <script src="script.js"></script> 
+    <head>
+        <title>Asif C A</title>
+            <link rel="stylesheet" href="style.css">
 
-	<title>Asif C A</title>
-</head>
-<body>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
 
-	<!-- Contains the navisland elements -->
+            <script src="script.js" defer></script>
+    </head>
+    
+    <body>
+        <div class="windows">
 
-	<div class="nav">
-		<div class="enav current" id="home" onclick="window.location='#homesection';">
-			<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/></svg>
-			<div class="text">Home</div>
-		</div>
+            <div class="window about">
+                <label class="window-heading">
+                    AboutMe
+                    <div class="window-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/></svg>
+                    </div>
+                </label>
+                <div class="window-content">
+                    I'm Asif C A. I am a Computer Science student with a passion for making games.
+                </div>
+            </div>
 
-		<div class="enav" id="skills" onmouseover="swapSkillIcon();" onclick="window.location='#skillssection';">
-			<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M0-360v-240h52v86h98.67v-86h52v240h-52v-102H52v102H0Zm314 0v-188h-70v-52h192v52h-70v188h-52Zm163.33 0v-204q0-15.67 10.17-25.83Q497.67-600 513.33-600h193.34q15.66 0 25.83 10.17 10.17 10.16 10.17 25.83v204h-52v-188H636v146.67h-52V-548h-54.67v188h-52Zm324 0v-240h52v188H960v52H801.33Z"/></svg>
-			<div class="text">Skills</div>
-		</div>
+            <div class="window skills">
+                <label class="window-heading">
+                    Skills
+                    <div class="window-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/></svg>
+                    </div>
+                </label>
+                <div class="window-content">
+                    I have experience in <b>Godot</b>, making small games and expandable mechanics. <br><br>
+                    I also have experience in <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b>.
 
-		<div class="enav" id="projects" onclick="window.location='#projectssection';">
-			<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="m320-241.33-240-240 241.33-241.34L369-675 175-481l192.33 192.33L320-241.33ZM638.67-240 591-287.67l194-194L592.67-674 640-721.33l240 240L638.67-240Z"/></svg>
-			<div class="text">Projects</div>
-		</div>
-
-		<div class="enav" id="certifications" onclick="window.location='#certificationssection';">
-			<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M220-520 80-600v-160l140-80 140 80v160l-140 80Zm0-76.67 73.33-42v-82.66l-73.33-42-73.33 42v82.66l73.33 42Zm433.33 88.34V-586L800-500v280L560-80 320-220v-280l146.67-85.33v77l-80 47V-258L560-157.67 733.33-258v-203.33l-80-47Zm-126.66 95V-880h354l-75.34 113.33 75.34 113.34H593.33v240h-66.66ZM560-333ZM220-680Z"/></svg>
-			<div class="text">Certifications</div>
-		</div>
-
-		<div class="enav" id="contact" onclick="window.location='#contactsection';">
-			<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M146.67-160q-27 0-46.84-19.83Q80-199.67 80-226.67v-506.66q0-27 19.83-46.84Q119.67-800 146.67-800h666.66q27 0 46.84 19.83Q880-760.33 880-733.33v506.66q0 27-19.83 46.84Q840.33-160 813.33-160H146.67ZM480-454.67 146.67-670v443.33h666.66V-670L480-454.67Zm0-66.66 330.67-212H150l330 212ZM146.67-670v-63.33V-226.67-670Z"/></svg>
-			<div class="text">Contact</div>
-		</div>
-	</div>
-
+                </div>
+            </div>
 
 
-	<!-- Home Section -->
+            <div class="window projects">
+                <label class="window-heading">
+                    Projects
+                    <div class="window-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/></svg>
+                    </div>
+                </label>
+                <div class="window-content">
+                    Under construction.
+                    <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="00000"><path d="M756-120 537-339l84-84 219 219-84 84Zm-552 0-84-84 276-276-68-68-28 28-51-51v82l-28 28-121-121 28-28h82l-50-50 142-142q20-20 43-29t47-9q24 0 47 9t43 29l-92 92 50 50-28 28 68 68 90-90q-4-11-6.5-23t-2.5-24q0-59 40.5-99.5T701-841q15 0 28.5 3t27.5 9l-99 99 72 72 99-99q7 14 9.5 27.5T841-701q0 59-40.5 99.5T701-561q-12 0-24-2t-23-7L204-120Z"/></svg>
+                    
+                </div>
+            </div>
 
-	<div class="home" id="homesection">
-		<div class="me">
-			.asif c a
-		
-			<div class="aboutme">
-				{<br>
-        		<h4>&nbsp&nbsp&nbsp web: developer;<br>
-          		    &nbsp&nbsp&nbsp game: developer;</h4>
-				}
-			</div>
-		</div>
-	</div>
+             <div class="window cert">
+                <label class="window-heading">
+                    Certifications
+                    <div class="window-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/></svg>
+                    </div>
+                </label>
+                <div class="window-content">
+                    Under construction.
+                    <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="00000"><path d="M756-120 537-339l84-84 219 219-84 84Zm-552 0-84-84 276-276-68-68-28 28-51-51v82l-28 28-121-121 28-28h82l-50-50 142-142q20-20 43-29t47-9q24 0 47 9t43 29l-92 92 50 50-28 28 68 68 90-90q-4-11-6.5-23t-2.5-24q0-59 40.5-99.5T701-841q15 0 28.5 3t27.5 9l-99 99 72 72 99-99q7 14 9.5 27.5T841-701q0 59-40.5 99.5T701-561q-12 0-24-2t-23-7L204-120Z"/></svg>
+                    
+                </div>
+            </div>
 
-	<div class="homerest">
-		I'm Asif C A, a Bachelor of Technology (B.Tech) student in Computer Science with a strong passion for game development, web technologies, and solving problems through innovative coding solutions.
-	</div>
+            <div class="window contact">
+                <label class="window-heading">
+                    Contact
+                    <div class="window-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/></svg>
+                    </div>
+                </label>
+                <div class="window-content">
+                    Email:
+                    <a href="mailto:officialasifca@gmail.com" target="_blank">
+                        officialasifca@gmail.com
+                    </a>
+                    LinkedIn: 
+                    <a href="https://www.linkedin.com/in/asif-c-a-1551b8333/" target="_blank">Asif C A</a>
+                </div>
+            </div>
 
+        </div>    
+        
+        
+        <div class="deck">
 
-	<!-- Skill Section -->
+            <div class="deck-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
 
-	<div class="skills" id="skillssection">
-		Skills
+                <div class="desc">
+                    AboutMe
+                </div>
+            </div>
 
-		<div class="skillicons">
-			<div class="eskill" id="html">
-				<svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 512.00 512.00" enable-background="new 0 0 512 512" xml:space="preserve" stroke="#000000" stroke-width="0.00512" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="c133de6af664cd4f011a55de6b000d0b"> <path display="inline" d="M108.669,0.501h23.032v22.756h21.069V0.501h23.034V69.41h-23.032V46.334h-21.069V69.41h-23.032V0.501 H108.669z M206.091,23.353h-20.275V0.501h63.594v22.852h-20.285V69.41h-23.032V23.353H206.091z M259.502,0.501h24.02l14.771,24.213 l14.759-24.213h24.023V69.41h-22.938V35.256l-15.845,24.5h-0.395l-15.856-24.5V69.41h-22.539V0.501z M348.54,0.501h23.038v46.133 h32.391V69.41H348.54V0.501z M74.987,100.926l32.946,369.533l147.844,41.04L404.031,470.4l32.981-369.475H74.987z M368.289,188.62 l-2.063,22.977l-0.906,10.188h-0.149H256h-0.158h-63.956l4.142,46.407h59.814H256h92.98h12.214l-1.106,12.172l-10.65,119.32 l-0.682,7.652L256,433.045v0.008l-0.208,0.059l-92.839-25.774l-6.351-71.161h20.97h24.527l3.227,36.146l50.474,13.632l0.042-0.013 v-0.004l50.551-13.64l5.257-58.781H256h-0.158H154.578L143.439,188.62l-1.085-12.157h113.488H256h113.374L368.289,188.62z"> </path> </g> </g></svg>
-				<div class="alt">HTMl5</div>
-			</div>
-			<div class="eskill" id="css">
-				<svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="c133de6af664cd4f011a55de6b001a2b"> <path display="inline" d="M204.064,46.682v22.018h-56.302V0.501h56.302v24.13h-32.172v22.051H204.064z M261.941,24.631h22.492 V0.501h-56.308c0,0,0,12.112,0,24.13c7.533,7.533,11.461,11.139,22.356,22.034c-6.369,0-22.356,0.022-22.356,0.021v22.014h56.308 V46.682L261.941,24.631z M341.746,24.631h22.49V0.501H307.93c0,0,0,12.112,0,24.13c7.531,7.533,11.461,11.139,22.355,22.034 c-6.365,0-22.355,0.022-22.355,0.021v22.014h56.307V46.682L341.746,24.631z M438.395,101.112l-34.203,370.486l-148.193,39.9 l-148.196-39.9L73.605,101.112H438.395z M369.477,176.444H255.865h-115.62l5.529,44.739h110.091h6.184l-6.184,2.574 l-106.067,44.177l3.518,43.73l102.549,0.333l54.963,0.175l-3.521,58.311l-51.442,14.484v-0.046l-0.422,0.116l-49.684-12.542 l-3.015-36.195h-0.164h-46.085h-0.162l6.032,69.876l93.5,27.649v-0.05l0.168,0.05l93-27.146L361.1,267.935H255.865h-0.26 l0.26-0.112l109.086-46.639L369.477,176.444z"> </path> </g> </g></svg>
-				<div class="alt">CSS3</div>
-			</div>
+            <div class="deck-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="M390-120q-51 0-88-35.5T260-241q-60-8-100-53t-40-106q0-21 5.5-41.5T142-480q-11-18-16.5-38t-5.5-42q0-61 40-105.5t99-52.5q3-51 41-86.5t90-35.5q26 0 48.5 10t41.5 27q18-17 41-27t49-10q52 0 89.5 35t40.5 86q59 8 99.5 53T840-560q0 22-5.5 42T818-480q11 18 16.5 38.5T840-400q0 62-40.5 106.5T699-241q-5 50-41.5 85.5T570-120q-25 0-48.5-9.5T480-156q-19 17-42 26.5t-48 9.5Zm130-590v460q0 21 14.5 35.5T570-200q20 0 34.5-16t15.5-36q-21-8-38.5-21.5T550-306q-10-14-7.5-30t16.5-26q14-10 30-7.5t26 16.5q11 16 28 24.5t37 8.5q33 0 56.5-23.5T760-400q0-5-.5-10t-2.5-10q-17 10-36.5 15t-40.5 5q-17 0-28.5-11.5T640-440q0-17 11.5-28.5T680-480q33 0 56.5-23.5T760-560q0-33-23.5-56T680-640q-11 18-28.5 31.5T613-587q-16 6-31-1t-20-23q-5-16 1.5-31t22.5-20q15-5 24.5-18t9.5-30q0-21-14.5-35.5T570-760q-21 0-35.5 14.5T520-710Zm-80 460v-460q0-21-14.5-35.5T390-760q-21 0-35.5 14.5T340-710q0 16 9 29.5t24 18.5q16 5 23 20t2 31q-6 16-21 23t-31 1q-21-8-38.5-21.5T279-640q-32 1-55.5 24.5T200-560q0 33 23.5 56.5T280-480q17 0 28.5 11.5T320-440q0 17-11.5 28.5T280-400q-21 0-40.5-5T203-420q-2 5-2.5 10t-.5 10q0 33 23.5 56.5T280-320q20 0 37-8.5t28-24.5q10-14 26-16.5t30 7.5q14 10 16.5 26t-7.5 30q-14 19-32 33t-39 22q1 20 16 35.5t35 15.5q21 0 35.5-14.5T440-250Zm40-230Z"/></svg>
 
-			<div class="eskill" id="javascript">
-				<svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>javascript</title> <path d="M17.313 14.789h-2.809c0 2.422-0.011 4.829-0.011 7.254 0.033 0.329 0.051 0.712 0.051 1.099 0 0.81-0.081 1.601-0.236 2.365l0.013-0.076c-0.412 0.861-1.475 0.751-1.957 0.6-0.451-0.242-0.808-0.609-1.031-1.055l-0.006-0.014c-0.044-0.094-0.097-0.174-0.16-0.246l0.001 0.001-2.281 1.406c0.367 0.79 0.934 1.434 1.637 1.885l0.018 0.011c0.763 0.427 1.675 0.678 2.645 0.678 0.484 0 0.954-0.063 1.401-0.18l-0.038 0.009c0.988-0.248 1.793-0.89 2.254-1.744l0.009-0.019c0.359-0.914 0.566-1.973 0.566-3.080 0-0.388-0.026-0.77-0.075-1.145l0.005 0.044c0.015-2.567 0-5.135 0-7.722zM28.539 23.843c-0.219-1.368-1.11-2.518-3.753-3.59-0.92-0.431-1.942-0.731-2.246-1.425-0.063-0.158-0.099-0.341-0.099-0.532 0-0.124 0.015-0.244 0.044-0.359l-0.002 0.010c0.208-0.55 0.731-0.935 1.343-0.935 0.199 0 0.388 0.040 0.559 0.113l-0.009-0.004c0.552 0.19 0.988 0.594 1.215 1.112l0.005 0.013c1.292-0.845 1.292-0.845 2.193-1.406-0.216-0.369-0.459-0.689-0.734-0.977l0.002 0.002c-0.767-0.814-1.852-1.32-3.056-1.32-0.171 0-0.34 0.010-0.505 0.030l0.020-0.002-0.881 0.111c-0.856 0.194-1.587 0.639-2.133 1.252l-0.003 0.004c-0.535 0.665-0.859 1.519-0.859 2.449 0 1.279 0.613 2.415 1.56 3.131l0.010 0.007c1.706 1.275 4.2 1.555 4.519 2.755 0.3 1.462-1.087 1.931-2.457 1.762-0.957-0.218-1.741-0.83-2.184-1.652l-0.009-0.017-2.287 1.313c0.269 0.536 0.607 0.994 1.011 1.385l0.001 0.001c2.174 2.194 7.61 2.082 8.586-1.255 0.113-0.364 0.178-0.782 0.178-1.215 0-0.3-0.031-0.593-0.091-0.875l0.005 0.028zM1.004 1.004h29.991v29.991h-29.991z"></path> </g></svg>
-				<div class="alt">JavaScript</div>
-			</div>
+                <div class="desc">
+                    Skills
+                </div>
+            </div>
 
-			<div class="eskill" id="godot">
-				<svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.745 0.917c-1.458 0.328-2.906 0.781-4.266 1.464 0.031 1.198 0.109 2.344 0.266 3.505-0.526 0.339-1.078 0.63-1.568 1.026-0.5 0.38-1.010 0.75-1.464 1.198-0.906-0.594-1.859-1.156-2.849-1.651-1.063 1.141-2.052 2.375-2.865 3.755 0.609 0.99 1.25 1.911 1.938 2.792h0.016v8.474c0.016 0 0.031 0 0.047 0.005l5.198 0.5c0.271 0.026 0.484 0.245 0.5 0.521l0.161 2.292 4.531 0.323 0.313-2.115c0.042-0.276 0.276-0.479 0.552-0.479h5.484c0.276 0 0.51 0.203 0.552 0.479l0.313 2.115 4.531-0.323 0.161-2.292c0.016-0.276 0.229-0.495 0.505-0.521l5.193-0.5c0.016 0 0.031-0.005 0.047-0.005v-8.474h0.021c0.688-0.875 1.323-1.802 1.932-2.792-0.807-1.38-1.802-2.615-2.865-3.755-0.984 0.495-1.943 1.057-2.849 1.651-0.453-0.448-0.958-0.818-1.458-1.198-0.495-0.396-1.047-0.688-1.573-1.026 0.156-1.161 0.234-2.307 0.266-3.505-1.354-0.682-2.802-1.135-4.266-1.464-0.583 0.984-1.115 2.047-1.578 3.083-0.552-0.089-1.109-0.125-1.661-0.13h-0.026c-0.552 0.005-1.109 0.042-1.661 0.13-0.464-1.036-0.995-2.099-1.583-3.083zM8.635 13.323c1.729 0 3.13 1.406 3.13 3.135s-1.401 3.13-3.13 3.13c-1.729 0-3.13-1.401-3.13-3.13s1.401-3.135 3.13-3.135zM23.365 13.323c1.729 0 3.13 1.406 3.13 3.135s-1.401 3.13-3.13 3.13c-1.729 0-3.13-1.401-3.13-3.13s1.401-3.135 3.13-3.135zM8.932 14.568c-1.146 0-2.078 0.927-2.078 2.078 0 1.146 0.932 2.073 2.078 2.073 1.151 0 2.083-0.927 2.083-2.073 0-1.151-0.932-2.078-2.083-2.078zM23.063 14.568c-1.146 0-2.078 0.927-2.078 2.078 0 1.146 0.932 2.073 2.078 2.073 1.151 0 2.078-0.927 2.078-2.073 0-1.151-0.927-2.078-2.078-2.078zM16 15.172c0.557 0 1.010 0.406 1.010 0.911v2.885c0 0.505-0.453 0.917-1.010 0.917s-1.010-0.411-1.010-0.917v-2.885c0-0.505 0.453-0.911 1.010-0.911zM1.948 22.599c0 0.505 0.005 1.052 0.005 1.161 0 4.938 6.26 7.307 14.036 7.333h0.021c7.776-0.026 14.031-2.396 14.031-7.333 0-0.109 0.005-0.656 0.010-1.161l-4.672 0.453-0.161 2.307c-0.021 0.276-0.24 0.5-0.516 0.516l-5.578 0.396c-0.271 0-0.51-0.198-0.552-0.474l-0.318-2.156h-4.516l-0.318 2.156c-0.042 0.286-0.297 0.495-0.594 0.474l-5.531-0.396c-0.276-0.021-0.5-0.24-0.521-0.516l-0.156-2.307-4.672-0.448z"></path> </g></svg>
-				<div class="alt">Godot</div>
-			</div>
-		</div>
-	</div>
+            <div class="deck-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="M160-240v-480 520-40Zm0 80q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v200h-80v-200H447l-80-80H160v480h200v80H160ZM584-56 440-200l144-144 56 57-87 87 87 87-56 57Zm192 0-56-57 87-87-87-87 56-57 144 144L776-56Z"/></svg>
 
+                <div class="desc">
+                    Projects
+                </div>
+            </div>
 
-	<!-- Projects Section -->
+            <div class="deck-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="M480-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM240-40v-309q-38-42-59-96t-21-115q0-134 93-227t227-93q134 0 227 93t93 227q0 61-21 115t-59 96v309l-240-80-240 80Zm240-280q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70ZM320-159l160-41 160 41v-124q-35 20-75.5 31.5T480-240q-44 0-84.5-11.5T320-283v124Zm160-62Z"/></svg>
 
-	<div class="projects" id="projectssection">
-		Projects
+                <div class="desc">
+                    Certification
+                </div>
+            </div>
 
-		<h1>:(</h1>
-	</div>
+            <div class="deck-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="00000"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
 
+                <div class="desc">
+                    Contact
+                </div>
+            </div>
 
-	<!-- Certifications Section -->
-
-	<div class="certifications" id="certificationssection">
-		Certifications
-		<div class="cert">
-			Wait patiently...
-		</div>
-
-		<div class="cert">
-			Wait patiently again...
-		</div>
-
-		<div class="cert">
-			And again...
-		</div>
-
-	</div>
-
-	<!-- Contact Section -->
-
-	<div class="contact" id="contactsection">
-		Contact
-		<form action="mailto:officialasifca@gmail.com" method="post" enctype="text/plain">
-			
-			Name&nbsp&nbsp :&nbsp<input type="text" size="50" name="name"><br>
-			
-			E-mail&nbsp:&nbsp<input type="text" size="50" name="mail"><br>
-			
-			Message:&nbsp<input type="text" name="comment" size="50"><br><br>
-			
-			<input class="buttons" type="submit" value="Send">
-			<input class="buttons" type="reset" value="Reset">
-		</form>
-	
-
-		<div class="socials"> 
-
-			<div class="socialsicons" id="linkedin" onclick="
-			window.open('https://www.linkedin.com/in/asif-c-a-1551b8333/', '_blank').focus();">
-				<svg fill="#ffffff" height="48px" width="48px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z M41.4,508.1H-8.5V348.4h49.9V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7 c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4 c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6 c35.5,0,63.3,23,63.3,72.4V508.1z"></path> </g></svg>
-			</div>
-
-			<div class="socialsicons" id="github" onclick="window.open('https://github.com/asif-c-a', '_blank').focus();">
-				<svg width="48px" height="48px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#ffffff]"> </path> </g> </g> </g> </g></svg>
-			</div>
-
-			<div class="socialsicons" id="hackerrank" onclick="window.open('https://www.hackerrank.com/profile/asifanwar2006', '_blank').focus();">
-				<svg fill="#FFFFFF" width="48px" height="48px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M0 0v24h24V0zm9.95 8.002h1.805c.061 0 .111.05.111.111v7.767c0 .061-.05.111-.11.111H9.95a.111.111 0 0 1-.111-.11v-2.87H7.894v2.87c0 .06-.05.11-.11.11H5.976a.11.11 0 0 1-.11-.11V8.112c0-.06.05-.11.11-.11h1.806c.061 0 .11.05.11.11v2.869H9.84v-2.87c0-.06.05-.11.11-.11zm2.999 0h5.778c.061 0 .111.05.111.11v7.767a.11.11 0 0 1-.11.112h-5.78a.11.11 0 0 1-.11-.11v-7.77c0-.06.05-.11.11-.11z"></path></g></svg>
-			</div>
-		</div>
-	</div>
+        </div>
 
 
-	<script type="text/javascript" src="script.js"></script>
-
-</body>
+        <div class="quick-tutorial">
+            Click icons from the deck/bar to open it.
+        </div>
+    </body>
 </html>
